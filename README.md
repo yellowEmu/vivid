@@ -1,3 +1,13 @@
+# FORK
+This repo is a fork. The original repo is here: https://github.com/gurki/vivid
+
+Changes:
+
+ - tests and examples are now excluded from CMake "all" target becuase they are broken under Ubuntu 22.04
+ - fetch content is now verbose
+ - fetch content no longer fetches glm commit with tag 0.9.9.8 but instead commit efec5db081e3aad807d0731e172ac597f6a39447 which is the newest version as of 21-03-2023 because 0.9.9.8 misses a fix that prevents an annoying C++20 deprecation warning
+
+
 # vivid 🌈
 A simple-to-use `cpp` color library
 

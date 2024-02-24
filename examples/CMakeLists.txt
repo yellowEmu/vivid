@@ -5,10 +5,10 @@ project( vivid_examples
     LANGUAGES CXX
 )
 
-add_executable( ${PROJECT_NAME}_basics basics.cpp )
+add_executable( ${PROJECT_NAME}_basics EXCLUDE_FROM_ALL basics.cpp )
 target_link_libraries( ${PROJECT_NAME}_basics PRIVATE vivid )
 
-add_executable( ${PROJECT_NAME}_strong_types strong_types.cpp )
+add_executable( ${PROJECT_NAME}_strong_types EXCLUDE_FROM_ALL strong_types.cpp )
 target_link_libraries( ${PROJECT_NAME}_strong_types PRIVATE vivid )
 
 
@@ -18,10 +18,10 @@ find_package( Qt5 COMPONENTS Core Gui QUIET )
 
 if ( Qt5_FOUND )
 
-    add_executable( ${PROJECT_NAME}_advanced advanced.cpp )
+    add_executable( ${PROJECT_NAME}_advanced EXCLUDE_FROM_ALL advanced.cpp )
     target_link_libraries( ${PROJECT_NAME}_advanced PUBLIC Qt5::Core Qt5::Gui vivid )
 
-    add_executable( ${PROJECT_NAME}_convert_maps convert_maps.cpp )
+    add_executable( ${PROJECT_NAME}_convert_maps EXCLUDE_FROM_ALL convert_maps.cpp )
     target_link_libraries( ${PROJECT_NAME}_convert_maps PUBLIC Qt5::Core Qt5::Gui vivid )
 
 endif()

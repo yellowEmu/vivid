@@ -32,7 +32,7 @@ if ( Qt5_FOUND )
 endif()
 
 
-add_executable( ${PROJECT_NAME} ${SOURCES} )
+add_executable( ${PROJECT_NAME} EXCLUDE_FROM_ALL ${SOURCES} )
 
 target_include_directories( ${PROJECT_NAME} 
     PRIVATE 
